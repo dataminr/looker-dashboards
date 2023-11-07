@@ -3,13 +3,13 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
-  preferred_slug: Bb0JySWqhAOgqIbuWLZk68
+  preferred_slug: wFC5zbO2xe4S3jlO4qeGfn
   elements:
   - title: Threat Actor Activities
     name: Threat Actor Activities
     model: dataminr_project
     explore: events
-    type: dataminr_project::test_viz
+    type: dataminr_project::cyber_viz
     fields: [events.event_timestamp_date_month, count_of_metadata_id]
     filters:
       events.metadata__description: "-NULL"
@@ -238,7 +238,7 @@
     name: Cyber Attacks
     model: dataminr_project
     explore: events
-    type: dataminr_project::test_viz
+    type: dataminr_project::cyber_viz
     fields: [events.event_timestamp_date_month, count_of_metadata_id]
     filters:
       events.metadata__description: "-NULL"
@@ -295,7 +295,7 @@
     name: Data Breaches
     model: dataminr_project
     explore: events
-    type: dataminr_project::test_viz
+    type: dataminr_project::cyber_viz
     fields: [events.event_timestamp_date_month, count_of_metadata_id]
     filters:
       events.metadata__description: "-NULL"
@@ -351,7 +351,7 @@
     name: Vulnerabilities
     model: dataminr_project
     explore: events
-    type: dataminr_project::test_viz
+    type: dataminr_project::cyber_viz
     fields: [events.event_timestamp_date_month, count_of_metadata_id]
     filters:
       events.metadata__description: "-NULL"

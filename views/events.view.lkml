@@ -40,7 +40,7 @@ GROUP BY
     1,
     2,
     3
-        UNION ALL select 'Dataminr_newyork' as events__about__labels__alert_type_name_value, 40.745900 as events_principal__location__region_coordinates__latitude, -73.983940 as events_principal__location__region_coordinates__longitude
+        UNION ALL select 'Dataminr_Newyork' as events__about__labels__alert_type_name_value, 40.745900 as events_principal__location__region_coordinates__latitude, -73.983940 as events_principal__location__region_coordinates__longitude
         UNION ALL select 'Dataminr_Bozeman' as events__about__labels__alert_type_name_value, 45.6794878 as events_principal__location__region_coordinates__latitude, -111.0398014 as events_principal__location__region_coordinates__longitude
           UNION ALL select 'Dataminr_Virginia' as events__about__labels__alert_type_name_value, 38.8940199 as events_principal__location__region_coordinates__latitude, -77.0683043 as events_principal__location__region_coordinates__longitude
           UNION ALL select 'Dataminr_Dublin' as events__about__labels__alert_type_name_value, 53.3458505 as events_principal__location__region_coordinates__latitude, -6.245248 as events_principal__location__region_coordinates__longitude
@@ -29793,7 +29793,7 @@ ORDER BY
 
 view: csvstaticdata {
   derived_table: {
-    sql: select 'Dataminr_newyork' as asset_name, 'Office' as asset_type, 'Dataminr Inc.,135 Madison Ave Floor 10, New York, NY 10016,United States' as asset_description, '5' as alerting_distance_miles, '40.745900' as asset_lat, '-73.983940' as asset_long
+    sql: select 'Dataminr_Newyork' as asset_name, 'Office' as asset_type, 'Dataminr Inc.,135 Madison Ave Floor 10, New York, NY 10016,United States' as asset_description, '5' as alerting_distance_miles, '40.745900' as asset_lat, '-73.983940' as asset_long
     UNION ALL select 'Dataminr_Bozeman' as asset_name, 'Office' as asset_type, 'Dataminr Inc.,131 W Main St, Unit D, Bozeman, MT 59715' as asset_description, '5' as alerting_distance_miles, '45.6794878' as asset_lat, '-111.0398014' as asset_long
     UNION ALL select 'Dataminr_Virginia' as asset_name, 'Office' as asset_type, 'Dataminr Inc.,2101 Wilson Blvd #1002,Arlington, VA 22201,United States' as asset_description, '5' as alerting_distance_miles, '38.8940199 ' as asset_lat, '-77.0683043' as asset_long
     UNION ALL select 'Dataminr_Dublin' as asset_name, 'Office' as asset_type, 'Dataminr Inc.,2 Windmill Lane,D02 K156, Dublin, Ireland' as asset_description, '5' as alerting_distance_miles, '53.3458505  ' as asset_lat, '-6.245248' as asset_long
@@ -30157,47 +30157,6 @@ view: occurrence_trend {
   dimension: occurrence_trend_value {
     type: string
     sql: ${TABLE}.events__security_result__category_details_events__security_result__category_details;;
-  }
-}
-
-view: iocs_derived {
-  derived_table: {
-    sql: select 'Dataminr_newyork' as asset_name, 'Office' as asset_type, 'Dataminr Inc.,135 Madison Ave Floor 10, New York, NY 10016,United States' as asset_description, '5' as alerting_distance_miles, '40.745900' as asset_lat, '-73.983940' as asset_long
-          UNION all select 'Dataminr_Bozeman', 'Office', 'Dataminr Inc.,131 W Main St, Unit D, Bozeman, MT 59715', '5', '45.6794878', '-111.0398014'
-          UNION all select 'Dataminr_Virginia', 'Office', 'Dataminr Inc.,2101 Wilson Blvd #1002,Arlington, VA 22201,United States', '5', '38.8940199 ', '-77.0683043'
-          UNION all select 'Dataminr_Dublin', 'Office', 'Dataminr Inc.,2 Windmill Lane,D02 K156, Dublin, Ireland', '5', '53.3458505  ', '-6.245248'
-          UNION all select 'Dataminr_London', 'Office', 'Dataminr Inc.,10 York Rd, London SE1 7ND, UK', '5', '51.5037543', '-0.1181606'
-          UNION all select 'Dataminr_Melbourne', 'Office', 'Dataminr Inc.,120 Spencer St, Melbourne VIC 3000, Australia', '5', '-37.8182119', '144.9521438'
-          UNION all select 'Dataminr_Seattle', 'Office', 'Dataminr Inc.,925 4th Ave #11th, Seattle, WA 98104', '5', '47.6054854 ', '-122.3354275';;
-  }
-  dimension: asset_name {
-    type: string
-    sql: ${TABLE}.asset_name ;;
-  }
-  dimension: asset_type {
-    type: string
-    sql: ${TABLE}.asset_type ;;
-  }
-  dimension: asset_description {
-    type: string
-    sql: ${TABLE}.asset_description ;;
-  }
-  dimension: alerting_distance_miles {
-    type: string
-    sql: ${TABLE}.alerting_distance_miles ;;
-  }
-  dimension: asset_lat {
-    type: string
-    sql: ${TABLE}.asset_lat ;;
-  }
-  dimension: asset_long {
-    type: string
-    sql: ${TABLE}.asset_long ;;
-  }
-  dimension: asset_location {
-    type: location
-    sql_latitude: ${asset_lat} ;;
-    sql_longitude: ${asset_long} ;;
   }
 }
 
@@ -104027,84 +103986,5 @@ view: events__extensions__vulns__vulnerabilities__about__process_ancestors__file
   dimension: value {
     type: string
     sql: ${TABLE}.value ;;
-  }
-}
-
-view: hashstaticdata {
-  derived_table: {
-    sql: select '1681692390' as _time, '097d8edb1762d7d3ded4360a9f5b4673a898937421f36853d2f5cde77e1bac93' as hash1, 'AlienVault Open Threat Exchange' as source, 'Technical analysis posted of privilege escalation malware associated with Trigona ransomware family written in Delphi programming language: Corporate via AlienVault Open Threat Exchange.' as caption
-    UNION ALL select '1681692390' as _time, '4a06231957c53dee1a11ff3eb84caad082f18761aee49e72d79c7f1d32884e34' as hash1, 'AlienVault Open Threat Exchange' as source, 'Technical analysis posted of C2 malware associated with Trigona ransomware family written in Delphi programming language: Corporate via AlienVault Open Threat Exchange.' as caption
-    UNION ALL select '1681601028' as _time, '55884b3b0018b42e500c8ca427d8ae3b3174d9efca5aa57b34eb9202cb84913a' as hash1, 'VirusTotal' as source, 'Analysis posted of persistence malware associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Blog via VirusTotal.' as caption
-    UNION ALL select '1681601028' as _time, '60b0e7e09fe91aa785b85315aad3850e7f47f70a5aab7ae9ef31ad1c50477f55' as hash1, 'VirusTotal' as source, 'Analysis posted of malicoius file associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Blog via VirusTotal.' as caption
-    UNION ALL select '1681601028' as _time, 'be125a98ba01f1bd318271b5de8114da139e5f78449ab3eb69c5aa4934026aed' as hash1, 'VirusTotal' as source, 'Analysis posted of network reconnaissance malware associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Blog via VirusTotal.' as caption
-    UNION ALL select '1681601028' as _time, 'ef0785dcdfe4fff99dc79bd89f1d1c2b207e67cb8fe6940127dd655ec202a770' as hash1, 'VirusTotal' as source, 'Analysis posted of network reconnaissance malware associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Blog via VirusTotal.' as caption
-    UNION ALL select '1681692390' as _time, 'f29b948905449f330d2e5070d767d0dac4837d0b566eee28282dc78749083684' as hash1, 'AlienVault Open Threat Exchange' as source, 'Technical analysis posted of defense evasion malware associated with Trigona ransomware family written in Delphi programming language: Corporate via AlienVault Open Threat Exchange.' as caption
-    UNION ALL select '1681692390' as _time, '250e81eeb4df4649ccb13e271ae3f80d44995b2f8ffca7a2c5e1c738546c2ab1' as hash1, 'AlienVault Open Threat Exchange' as source, 'Technical analysis posted of defense evasion malware associated with Trigona ransomware family written in Delphi programming language: Corporate via AlienVault Open Threat Exchange.' as caption;;
-  }
-
-  dimension: _time {
-    type: string
-    sql: ${TABLE}._time ;;
-  }
-
-  dimension: hash {
-    type: string
-    sql: ${TABLE}.hash1 ;;
-  }
-
-  dimension: source {
-    type: string
-    sql: ${TABLE}.source ;;
-  }
-
-  dimension: caption {
-    type: string
-    sql: ${TABLE}.caption ;;
-  }
-}
-
-view: malwarestaticdata {
-  derived_table: {
-    sql: select '1681497456' as _time, 'Aurora Stealer' as malware, 'GitHub' as source, 'Technical analysis published on Aurora Stealer by security researcher: Blog via GitHub.' as caption, Null as ip, Null as hashes
-          UNION ALL select '1681601028','Chameleon',"AlienVault Open Threat Exchange","Analysis posted of malicious IP associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Corporate via AlienVault Open Threat Exchange.","146.70.41[.]143",NULL
-          UNION ALL select '1681601028','Chameleon',"AlienVault Open Threat Exchange","Analysis posted of malicious domain associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Corporate via AlienVault Open Threat Exchange.",NULL,NULL
-          UNION ALL select '1681601028','Chameleon','VirusTotal',"Analysis posted of malicoius file associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Blog via VirusTotal.",NULL,'60b0e7e09fe91aa785b85315aad3850e7f47f70a5aab7ae9ef31ad1c50477f55'
-          UNION ALL select '1681601028','Chameleon','VirusTotal',"Analysis posted of network reconnaissance malware associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Blog via VirusTotal.",NULL,'be125a98ba01f1bd318271b5de8114da139e5f78449ab3eb69c5aa4934026aed'
-          UNION ALL select '1681600628','Chameleon','Cyble',"Analysis posted of new Chameleon Android malware targeting mobile users in Australia and Poland: Corporate via Cyble.",NULL,NULL
-          UNION ALL select '1681601028','Chameleon','VirusTotal',"Analysis posted of persistence malware associated with new Chameleon Android malware targeting mobile users in Australia and Poland: Blog via VirusTotal.",NULL,'55884b3b0018b42e500c8ca427d8ae3b3174d9efca5aa57b34eb9202cb84913a'
-          UNION ALL select '1681568769','Goldoson',"Bleeping Computer",'New Android malware ""Goldoson"" infiltrates 60 Google Play apps that collectively have 100M downloads: Blog via Bleeping Computer.',NULL,NULL
-          UNION ALL select '1681645810',"RedLine Stealer","Dread Forums (Dark Web)","RedLine Stealer malware advertised on illicit forum: Blog via Dread Forums (Dark Web).",NULL,NULL
-          UNION ALL select '1681691900','Trigona','Zscaler',"Technical analysis posted of Trigona ransomware family written in Delphi programming language: Corporate via Zscaler.",NULL,NULL
-          UNION ALL select '1681692390','Trigona',"AlienVault Open Threat Exchange","Technical analysis posted of defense evasion malware associated with Trigona ransomware family written in Delphi programming language: Corporate via AlienVault Open Threat Exchange.",NULL,'f29b948905449f330d2e5070d767d0dac4837d0b566eee28282dc78749083684'
-          UNION ALL select '1681692390',"Trigona ","AlienVault Open Threat Exchange","Technical analysis posted of C2 malware associated with Trigona ransomware family written in Delphi programming language: Corporate via AlienVault Open Threat Exchange.",NULL,'4a06231957c53dee1a11ff3eb84caad082f18761aee49e72d79c7f1d32884e34'
-          UNION ALL select '1681692390',"Trigona ","AlienVault Open Threat Exchange","Technical analysis posted of privilege escalation malware associated with Trigona ransomware family written in Delphi programming language: Corporate via AlienVault Open Threat Exchange.",NULL,'097d8edb1762d7d3ded4360a9f5b4673a898937421f36853d2f5cde77e1bac93'
-          UNION ALL select '1681648347',"WannaCry",'XSS',"Individual looking for WannaCry ransomware source code on illicit forum: Blog via XSS.",NULL,NULL;;
-  }
-  dimension: _time {
-    type: string
-    sql: ${TABLE}._time ;;
-  }
-
-  dimension: malware {
-    type: string
-    sql: ${TABLE}.malware ;;
-  }
-
-  dimension: source {
-    type: string
-    sql: ${TABLE}.source ;;
-  }
-
-  dimension: caption {
-    type: string
-    sql: ${TABLE}.caption ;;
-  }
-  dimension: ip{
-    type: string
-    sql: ${TABLE}.ip ;;
-  }
-  dimension: hashes {
-    type: string
-    sql: ${TABLE}.hashes ;;
   }
 }

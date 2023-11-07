@@ -3,7 +3,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
-  preferred_slug: WmU2q3p8nI5cJMp9B5d04S
+  preferred_slug: gG3aWqVl5XaKCF931NjZxW
   elements:
   - title: Configured Important Locations
     name: Configured Important Locations
@@ -31,6 +31,12 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     defaults_version: 1
+    minimum_column_width: 75
+    series_column_widths:
+      csvstaticdata.asset_description: 426
+      csvstaticdata.asset_name: 135
+      csvstaticdata.asset_lat: 93
+      csvstaticdata.asset_long: 95
     listen: {}
     row: 16
     col: 0
@@ -98,7 +104,6 @@
   - name: ''
     type: text
     title_text: ''
-    subtitle_text: ''
     body_text: '[{"type":"h3","align":"start","children":[{"text":"This dashboards
       shows Dataminr alerts within threshold miles from important customer locations."}],"id":1697088043430}]'
     rich_content_json: '{"format":"slate"}'
@@ -153,7 +158,7 @@
     title: Select Time Range
     type: field_filter
     default_value: 7 day
-    allow_multiple_values: true
+    allow_multiple_values: false
     required: false
     ui_config:
       type: advanced

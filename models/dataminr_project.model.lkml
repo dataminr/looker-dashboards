@@ -11,30 +11,15 @@ datagroup: dataminr_default_datagroup {
 
 persist_with: dataminr_default_datagroup
 
-explore:  hashstaticdata {}
 explore: csvstaticdata {}
-explore: malwarestaticdata {}
-explore: iocs_derived {}
 explore: close_proxymity_map {}
 
 explore: events {
+    sql_always_where: ${metadata__log_type} = "DATAMINR_ALERT" ;;
     join: alert_name_not_null {
       type: left_outer
       sql_on: ${events.metadata__id} = ${alert_name_not_null.alert_name_metadata_id} ;;
       relationship: one_to_many
-    }
-    sql_always_where: ${metadata__log_type} = "DATAMINR_ALERT" ;;
-    join: malwarestaticdata {
-      view_label: "Events: Malware"
-      type: left_outer
-      relationship: one_to_one
-      sql_on: ${events__security_result__associations.name}=${malwarestaticdata.malware} ;;
-    }
-    join: hashstaticdata {
-      view_label: "Events: Hash"
-      type: left_outer
-      relationship: one_to_one
-      sql_on: ${events__security_result_for.about__file__hash}=${hashstaticdata.hash} ;;
     }
     join: events__about {
       view_label: "Events: About"
