@@ -66,7 +66,7 @@ looker.plugins.visualizations.add({
         percentage = count ? Math.trunc((ioc_count_difference / ioc1_value) * estimatedTotalItems):0;
     }
     const arrowIcon = percentage > 0 ? '➚' : '➘';
-
+    percentage = (percentage == 0)?'N/A':percentage+'%'
     // Determine the color based on the ioc count
     var color;
     if (ioc_value <= 0) {
@@ -83,7 +83,7 @@ looker.plugins.visualizations.add({
         <div style="font-size: 60px; font-family: Arial, Helvetica, sans-serif; color: ${color};">${ioc_value}</div>
         <div style="display: flex; flex-direction: column; align-items: flex-start;">
           <div style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: ${color};">${arrowIcon}</div>
-          <div style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; text-align: right; color: ${color};">${percentage}%</div>
+          <div style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; text-align: right; color: ${color};">${percentage}</div>
         </div>
       </div>
     `;
@@ -114,7 +114,7 @@ looker.plugins.visualizations.add({
             label: null,
             data: datasets,
             fill: false,
-            borderColor: 'rgb(0, 0, 0)',
+            borderColor: color,
             pointRadius: 0,
             tension: 0.1
           }],

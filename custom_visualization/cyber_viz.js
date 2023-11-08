@@ -72,14 +72,14 @@ looker.plugins.visualizations.add({
     else {
       color = 'red';
     }
-
+    percentage = (percentage == 0)?'N/A':percentage+'%'
     // Display the count and percentage value in the container
     this.container.innerHTML = `
       <div style="display: flex; align-items: center;">
         <div style="font-size: 60px; font-family: Arial, Helvetica, sans-serif;">${threat_count}</div>
         <div style="display: flex; flex-direction: column; align-items: flex-start;">
           <div style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: ${color};">${arrowIcon}</div>
-          <div style="font-size: 20px; text-align: right; font-family: Arial, Helvetica, sans-serif; color: ${color};">${percentage}%</div>
+          <div style="font-size: 20px; text-align: right; font-family: Arial, Helvetica, sans-serif; color: ${color};">${percentage}</div>
         </div>
       </div>
     `;
