@@ -1,4 +1,4 @@
-project_name: "dataminr"
+project_name: "dataminr-dashboards"
 
 constant: CHRONICLE_URL{
   value: "https://crestdatasys.backstory.chronicle.security"
