@@ -3,7 +3,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
-  preferred_slug: wFC5zbO2xe4S3jlO4qeGfn
+  preferred_slug: FV4dtL4cyRSST0Hx4veyYt
   elements:
   - title: Threat Actor Activities
     name: Threat Actor Activities
@@ -58,7 +58,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 0
+    row: 2
     col: 0
     width: 6
     height: 6
@@ -154,7 +154,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 6
+    row: 8
     col: 0
     width: 6
     height: 6
@@ -230,7 +230,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 24
+    row: 26
     col: 0
     width: 24
     height: 12
@@ -287,7 +287,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 0
+    row: 2
     col: 6
     width: 6
     height: 6
@@ -343,7 +343,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 0
+    row: 2
     col: 12
     width: 6
     height: 6
@@ -401,7 +401,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 0
+    row: 2
     col: 18
     width: 6
     height: 6
@@ -458,7 +458,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 12
+    row: 14
     col: 0
     width: 12
     height: 6
@@ -517,7 +517,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 12
+    row: 14
     col: 12
     width: 12
     height: 6
@@ -577,7 +577,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 18
+    row: 20
     col: 12
     width: 12
     height: 6
@@ -636,7 +636,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 18
+    row: 20
     col: 0
     width: 12
     height: 6
@@ -732,7 +732,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 6
+    row: 8
     col: 12
     width: 6
     height: 6
@@ -828,7 +828,7 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 6
+    row: 8
     col: 6
     width: 6
     height: 6
@@ -925,10 +925,21 @@
     listen:
       Select Time Range: events.event_timestamp_date_time
       Watchlist: watchlist_name.watchlist_name_value
-    row: 6
+    row: 8
     col: 18
     width: 6
     height: 6
+  - name: ''
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: '[{"children":[{"text":"Overview of cyber-related Dataminr Pulse alerts
+      by category"}],"type":"h3"}]'
+    rich_content_json: '{"format":"slate"}'
+    row: 0
+    col: 0
+    width: 24
+    height: 2
   filters:
   - name: Select Time Range
     title: Select Time Range

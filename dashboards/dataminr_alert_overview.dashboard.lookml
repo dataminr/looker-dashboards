@@ -3,7 +3,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
-  preferred_slug: v0Grx4uA3uk92H7qzAX478
+  preferred_slug: orOrRLaU72MLlxorgk7eGu
   elements:
   - title: Occurrence by Severity
     name: Occurrence by Severity
@@ -284,8 +284,8 @@
   - name: ''
     type: text
     title_text: ''
-    body_text: '[{"type":"h3","children":[{"text":"This dashboards shows high level
-      analytics about the dataminr alerts from the selected Watchlist."}]}]'
+    body_text: '[{"type":"h3","children":[{"text":"Overview of alerts from your Dataminr
+      Pulse watchlists "}]}]'
     rich_content_json: '{"format":"slate"}'
     row: 0
     col: 0
