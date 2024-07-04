@@ -3,7 +3,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
-  preferred_slug: LccmS1vRtjjtJW69epOG1g
+  preferred_slug: KvHNDlHHZXDGvNjxgQ1ePE
   elements:
   - title: Untitled
     name: Untitled
@@ -451,8 +451,8 @@
   - name: ''
     type: text
     title_text: ''
-    body_text: '[{"type":"h3","children":[{"text":"An overview of your Dataminr alerts
-      stored in Splunk."}]}]'
+    body_text: '[{"type":"h3","children":[{"text":"An overview of your Dataminr Pulse
+      alerts stored in Google Chronicle"}]}]'
     rich_content_json: '{"format":"slate"}'
     row: 0
     col: 0

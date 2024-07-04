@@ -379,8 +379,8 @@
   - name: ''
     type: text
     title_text: ''
-    body_text: '[{"type":"h3","children":[{"text":"This dashboards shows Indicator
-      of Compromise in the current Splunk environment."}],"id":1697018359819}]'
+    body_text: '[{"type":"h3","children":[{"text":"Shows other events in Google Chronicle
+      matching Dataminr Pulse IOCs (IPs, file hashes, domains, and malware)."}],"id":"16c27"}]'
     rich_content_json: '{"format":"slate"}'
     row: 0
     col: 0

@@ -3,7 +3,7 @@
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
-  preferred_slug: gG3aWqVl5XaKCF931NjZxW
+  preferred_slug: ZFeVzrO6hTOn1RcP5K2V8r
   elements:
   - title: Configured Important Locations
     name: Configured Important Locations
@@ -104,8 +104,8 @@
   - name: ''
     type: text
     title_text: ''
-    body_text: '[{"type":"h3","align":"start","children":[{"text":"This dashboards
-      shows Dataminr alerts within threshold miles from important customer locations."}],"id":1697088043430}]'
+    body_text: '[{"type":"h3","align":"start","children":[{"text":"Shows Dataminr
+      Pulse alerts in close proximity of customer-defined important locations"}],"id":1697088043430}]'
     rich_content_json: '{"format":"slate"}'
     row: 0
     col: 0
