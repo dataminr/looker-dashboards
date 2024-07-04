@@ -80,7 +80,7 @@
 
 	![AD_4nXcU68gg2-Tc84AOIuIEvkJPuRjtNfPflTvJuGB3JbLK6tp2myK3jBDR9g6Eq69NWEbkHrTWSjofiGmBgdMEoFcdgfssv9y9s05eD3G1JYh1vqwxvnN_ssg3](https://github.com/dataminr/looker-dashboards/assets/138869970/af4567e8-03a8-4d42-9054-7520057b06b8)
 
-10. Now, you should be able to see the code from master branch. If not then <br>
+10. Now, you should be able to see the code from **main** branch. If not then <br>
       a. In the ‘Git Actions’ tab from the left side, click on the “Pull from…” option.
 
     ![image17](https://github.com/dataminr/looker-dashboards/assets/138869970/6abb00a1-9a7e-4733-906b-0005b19745df)
@@ -129,7 +129,9 @@ To sync this changes in forked repository from the main repository, make sure to
 
 3. After completing the steps above, go to your Looker instance and refresh the window. You will then see the option to pull the latest code from production by clicking the "Pull from Production" button in the top right corner. This will update your repo with the latest code from the main branch.
 
-	![AD_4nXdaFSsSqoIenfy4CkneOs2SkujythDEyLZ6V8WYL9CS--JLOaKOXJ_cZ5yNglcQhqxUajliEBP2sG1YFYqr4SdOnj9brmoa4f4yBLdKr9aXBlSywtAAibBi](https://github.com/dataminr/looker-dashboards/assets/138869970/6fb21d67-eea2-4066-825d-b4eb2ced4dd5) <br>
+	![AD_4nXdaFSsSqoIenfy4CkneOs2SkujythDEyLZ6V8WYL9CS--JLOaKOXJ_cZ5yNglcQhqxUajliEBP2sG1YFYqr4SdOnj9brmoa4f4yBLdKr9aXBlSywtAAibBi](https://github.com/dataminr/looker-dashboards/assets/138869970/6fb21d67-eea2-4066-825d-b4eb2ced4dd5) <br><br>
+
+ 4. After Pulling the code from Production, Deploy the latest code changes to Production by pressing the Deploy to Production button from the top right corner. <br>
 
 	![AD_4nXfPvWlO_IgVxOPFsbO52hpZBRy_zUbZs_ayh7BCo0jDW-UuShA7fHsDCRSJmBu61NtjWT-6Tzq7rP5oaVcYWJL8t8L764ntFhGkSVtIfcY4UsXaxOrZZPZV](https://github.com/dataminr/looker-dashboards/assets/138869970/d19caed5-9233-41ac-a2c8-808bf7eee1fa) <br>
 
